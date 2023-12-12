@@ -1,4 +1,4 @@
-site_url: https://ntn-boilerplate.netlify.app/
+site_url: https://dsae.netlify.app/
 logo_url: https://ntn-boilerplate.netlify.app/icon.png
 
 publish_mode: editorial_workflow
@@ -52,6 +52,13 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+   - name: 'faq' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'FAQ' # Used in the UI
+    folder: '_faqs'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Answer', name: 'body', widget: 'markdown' }
   - name: 'projects'
     label: 'Projects'
     label_singular: 'Project'
